@@ -1,12 +1,12 @@
   // Initaialize and set up Facebook JS SDK
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '646613148876732',
+      appId      : '346780042475150',
       cookie     : true,
       xfbml      : true,
       version    : 'v2.10'
     });
-    FB.AppEvents.logPageView();   
+    FB.AppEvents.logPageView();
 
       FB.getLoginStatus(function(response) {
           console.log(response);
@@ -49,4 +49,3 @@
       }
     }, {scope:'email,public_profile'});
   }
-  

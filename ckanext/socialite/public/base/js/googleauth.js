@@ -85,12 +85,12 @@ function getMetaContent (propName) {
 /* Firebase Setup and Integration with CKAN */
 
 var config = {
-  apiKey: 'AIzaSyC0cAtWyUOKioISC2BIiPgws9PBT6lqSl0',
-  authDomain: 'ckan-githubauth.firebaseapp.com',
-  databaseURL: 'https://ckan-githubauth.firebaseio.com',
-  projectId: 'ckan-githubauth',
-  storageBucket: '',
-  messagingSenderId: '467483203377'
+  apiKey: 'AIzaSyDbtDvkotuS_3l_dATyVF_cneDm3QoHm0k',
+  authDomain: 'vulekamali.firebaseapp.com',
+  databaseURL: 'https://vulekamali.firebaseio.com',
+  projectId: 'vulekamali',
+  storageBucket: 'vulekamali.appspot.com',
+  messagingSenderId: '495372455907'
 }
 
 firebase.initializeApp(config)

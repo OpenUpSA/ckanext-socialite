@@ -9,16 +9,7 @@
     		{% endblock %}
     	</h1>
       <fieldset>
-        <legend>
-          {% set auth_text = _("Log in with your {site_title} account") %}
-        <h4>{{ auth_text.format(site_title=app_globals.site_title) }}</h4>
-        </legend>
-        {% block form %}
-          {% snippet "user/snippets/login_form.html", action=c.login_handler, error_summary=error_summary %}
-        {% endblock %}
-      </fieldset>
-      <fieldset>
-        <legend><h4>{{ _('Log in with Social Media') }}</h4></legend>
+        <legend><h4>{{ _('Log in with your Social Media account') }}</h4></legend>
         <div class="login-box">
           <a href="#" class="social-button" id="facebook-btn" onclick="fb_login();"> <span>Sign in with Facebook</span></a>
           &nbsp;&nbsp;
@@ -28,7 +19,7 @@
           <a class="social-button" id="linkedin-btn" onclick="liAuth()"> <span>Sign in with LinkedIn</span></a>
         </div>
       </fieldset>
-      <br><br>  
+      <br><br>
     </div>
   </section>
 {% endblock %}
