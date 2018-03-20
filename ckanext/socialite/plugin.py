@@ -60,6 +60,10 @@ class SocialitePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IAuthenticator)
     plugins.implements(plugins.ITemplateHelpers)
 
+    def __init__(self, *args, **kwargs):
+        super(Socialite, self).__init__(*args, **kwargs)
+
+
     def update_config(self, config_):
         """Add resources used by the plugin into core config file."""
         toolkit.add_template_directory(config_, 'templates')
@@ -93,15 +97,6 @@ class SocialitePlugin(plugins.SingletonPlugin):
 
     def _logout_user(self):
         """Log out the currently logged in CKAN user."""
-        # import pylons
-        # to revoke the Google token uncomment the code below
-        # if 'ckanext_-accesstoken' in pylons.session:
-        #    atoken = pylons.session.get('ckanext_-accesstoken')
-        #    res = requests.get('https://accounts.google.com/o/oauth2/revoke?token='+atoken)
-        #    if res.status_code == 200:
-        #       del pylons.session['ckanext_-accesstoken']
-        #    else:
-        #   raise GoogleAuthException('Token not revoked')
         if 'ckanext_user' in pylons.session:
             del pylons.session['ckanext_user']
         if 'ckanext_email' in pylons.session:
